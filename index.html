@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>British Kitchen - School Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-content">
+            <h1 class="animated-title">British Kitchen</h1>
+            <p class="subtitle">Exploring the Culinary Traditions of Britain</p>
+        </div>
+    </div>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#3d-showcase">3D Showcase</a></li>
+                <li><a href="#dishes">Our Dishes</a></li>
+                <li><a href="#team">Our Team</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Our Project</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Welcome to our school profile paper project on British cuisine! We are a group of three students exploring the rich culinary traditions of Britain through three iconic dishes: Fish and Chips, Full English Breakfast, and Shepherd's Pie.</p>
+                    <p>British cuisine has a fascinating history that reflects the country's cultural heritage, geography, and historical influences. From hearty comfort foods to beloved street fare, British cooking offers a window into the nation's soul.</p>
+                    <p>Join us on this culinary journey as we delve into the origins, preparation methods, and cultural significance of these classic British dishes.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="British Food Spread">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="3d-showcase" class="showcase-3d">
+        <div class="container">
+            <h2>Interactive 3D Food Models</h2>
+            <p class="showcase-intro">Explore our dishes in 3D! Click and drag to rotate, scroll to zoom.</p>
+            <div class="models-grid">
+                <div class="model-container">
+                    <h3>Fish and Chips</h3>
+                    <div id="canvas-fish" class="canvas-3d"></div>
+                    <p class="model-instruction">Drag to rotate • Scroll to zoom</p>
+                </div>
+                <div class="model-container">
+                    <h3>Full English Breakfast</h3>
+                    <div id="canvas-breakfast" class="canvas-3d"></div>
+                    <p class="model-instruction">Drag to rotate • Scroll to zoom</p>
+                </div>
+                <div class="model-container">
+                    <h3>Shepherd's Pie</h3>
+                    <div id="canvas-pie" class="canvas-3d"></div>
+                    <p class="model-instruction">Drag to rotate • Scroll to zoom</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dishes" class="dishes">
+        <div class="container">
+            <h2>Our Featured Dishes</h2>
+            <div class="dish-cards">
+                <div class="dish-card" id="fish-and-chips">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1579208030886-b937da0925dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Fish and Chips">
+                    </div>
+                    <div class="dish-content">
+                        <h3>Fish and Chips</h3>
+                        <div class="dish-info">
+                            <p>The quintessential British fast food consisting of battered and deep-fried fish (typically cod or haddock) served with thick-cut fried potatoes.</p>
+                            <div class="dish-facts">
+                                <p><strong>Origin:</strong> Contrary to popular belief, fish and chips has roots in both Jewish and French cooking traditions, dating back to the 1860s.</p>
+                                <p><strong>Fun Fact:</strong> During World War II, fish and chips was one of the few foods not subject to rationing, as the government recognized its importance to national morale.</p>
+                            </div>
+                            <button class="read-more-btn" onclick="toggleReadMore('fish-chips-more')">Read More</button>
+                            <div class="read-more-content" id="fish-chips-more">
+                                <p>The dish originated when Jewish immigrants from Portugal and Spain brought their tradition of frying fish in a thin batter to England in the 15th century. The "chips" part came later, with fried potatoes becoming popular in the 19th century.</p>
+                                <p>By 1910, there were over 25,000 fish and chip shops across the UK, and the dish played an important role in feeding factory workers during the Industrial Revolution. Today, it remains a beloved comfort food throughout Britain, often served with salt, vinegar, and sometimes mushy peas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card" id="full-english">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1529411081224-84ac0d0bf6ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Full English Breakfast">
+                    </div>
+                    <div class="dish-content">
+                        <h3>Full English Breakfast</h3>
+                        <div class="dish-info">
+                            <p>A hearty morning meal featuring bacon, sausages, eggs, baked beans, grilled tomatoes, mushrooms, black pudding, and toast.</p>
+                            <div class="dish-facts">
+                                <p><strong>Origin:</strong> The full English breakfast became popular during the Victorian era, though many of its components have much longer histories.</p>
+                                <p><strong>Fun Fact:</strong> Also known as a "fry-up," this meal was traditionally designed to prepare people for a long day of physical labor.</p>
+                            </div>
+                            <button class="read-more-btn" onclick="toggleReadMore('english-more')">Read More</button>
+                            <div class="read-more-content" id="english-more">
+                                <p>The full English breakfast reached its peak of popularity in Edwardian Britain, and despite a decline following the food shortages of World War II, it remains a beloved weekend tradition and is often served all day in cafes and pubs.</p>
+                                <p>Regional variations exist throughout the UK, with the "Full Scottish" often including potato scones, the "Full Welsh" sometimes featuring laverbread (seaweed), and the "Ulster Fry" in Northern Ireland typically including soda bread and potato bread.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card" id="shepherds-pie">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1597362925123-77861d3fbac7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Shepherd's Pie">
+                    </div>
+                    <div class="dish-content">
+                        <h3>Shepherd's Pie</h3>
+                        <div class="dish-info">
+                            <p>A comforting casserole made with minced lamb, vegetables, and gravy, topped with a layer of mashed potatoes and baked until golden.</p>
+                            <div class="dish-facts">
+                                <p><strong>Origin:</strong> Developed in the late 18th century as a way for frugal housewives to repurpose leftover roasted meat.</p>
+                                <p><strong>Fun Fact:</strong> When made with beef instead of lamb, the dish is properly called "Cottage Pie" - Shepherd's Pie specifically refers to the lamb version (as shepherds tend sheep).</p>
+                            </div>
+                            <button class="read-more-btn" onclick="toggleReadMore('shepherds-more')">Read More</button>
+                            <div class="read-more-content" id="shepherds-more">
+                                <p>The dish emerged during a time when potatoes were becoming a staple food for the poor in Ireland and the United Kingdom. The potato topping provided an affordable way to stretch small amounts of meat into a filling family meal.</p>
+                                <p>Traditional recipes include onions, carrots, and peas in the meat mixture, though modern variations might include a wider range of vegetables or different seasonings. The dish exemplifies British comfort food at its finest - hearty, warming, and satisfying.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="team">
+        <div class="container">
+            <h2>Our Team</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <div class="member-image">
+                        <div class="chef-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                    </div>
+                    <h3>Team Member 1</h3>
+                    <p>Fish and Chips Expert</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <div class="chef-icon">
+                            <i class="fas fa-egg"></i>
+                        </div>
+                    </div>
+                    <h3>Team Member 2</h3>
+                    <p>Full English Breakfast Specialist</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <div class="chef-icon">
+                            <i class="fas fa-drumstick-bite"></i>
+                        </div>
+                    </div>
+                    <h3>Team Member 3</h3>
+                    <p>Shepherd's Pie Connoisseur</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>British Kitchen</h3>
+                    <p>School Project - 2025</p>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#3d-showcase">3D Showcase</a></li>
+                        <li><a href="#dishes">Our Dishes</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 British Kitchen Project. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="3d-models.js"></script>
+</body>
+</html>
