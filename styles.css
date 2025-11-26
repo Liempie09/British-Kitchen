@@ -1,0 +1,242 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #007BFF; /* Blauw voor een coole look */
+    padding: 1em;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    background: white;
+    color: #007BFF;
+    text-decoration: none;
+    border-radius: 20px; /* Ronde knoppen */
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    background: #0056b3; /* Donkerder blauw op hover */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Schaduw voor diepte */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    display: block;
+    border-radius: 0; /* Platte binnen-knoppen */
+    margin: 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.theme-toggle button {
+    padding: 0.75em 1.5em;
+    background: white;
+    color: #007BFF;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.theme-toggle button:hover {
+    background: #0056b3;
+    color: white;
+}
+
+body.dark {
+    background: #222;
+    color: #fff;
+}
+
+body.dark header nav {
+    background: #003d80; /* Donkerder in dark mode */
+}
+
+body.dark .nav-links a {
+    background: #333;
+    color: #fff;
+}
+
+body.dark .nav-links a:hover {
+    background: #555;
+}
+
+.hero, section {
+    padding: 2em;
+    text-align: center;
+}
+
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 1em;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+#search {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1em;
+}
+
+.recipe-card {
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.recipe-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    text-align: center;
+    padding: 1em;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.card-front {
+    background: white;
+}
+
+.card-back {
+    background: #f0f0f0;
+    transform: rotateY(180deg);
+}
+
+.card-front img, .recipe-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+    gap: 1em;
+}
+
+#contact-form input, #contact-form textarea {
+    padding: 0.75em;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+#contact-form button {
+    padding: 0.75em;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background: #007BFF;
+    color: white;
+}
+
+/* Animaties */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+section {
+    animation: fadeIn 1s;
+}

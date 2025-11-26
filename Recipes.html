@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>British Kitchen - Recipes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">British Kitchen</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="recipes.html">Recipes</a>
+                    <div class="dropdown-content">
+                        <a href="fish-and-chips.html">Fish and Chips</a>
+                        <a href="full-english.html">Full English Breakfast</a>
+                        <a href="apple-pie.html">Apple Pie</a>
+                        <a href="shepherds-pie.html">Shepherd's Pie</a>
+                    </div>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <button id="theme-btn">Toggle Dark Mode</button>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Our Recipes</h2>
+        <input type="text" id="search" placeholder="Search for a dish...">
+        <div class="recipe-grid">
+            <div class="recipe-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="https://images.unsplash.com/photo-1625937282414-c4cbe5ef63c9" alt="Fish and Chips">
+                        <h3>Fish and Chips</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>A classic British takeaway.</p>
+                        <a href="fish-and-chips.html">View Full Recipe</a>
+                    </div>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="https://images.unsplash.com/photo-1603242110355-413c1ecaf76f" alt="Full English Breakfast">
+                        <h3>Full English Breakfast</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Hearty start to the day.</p>
+                        <a href="full-english.html">View Full Recipe</a>
+                    </div>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="https://images.unsplash.com/photo-1567747404303-7d7b689a1b4c" alt="Apple Pie">
+                        <h3>Apple Pie</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Sweet dessert delight.</p>
+                        <a href="apple-pie.html">View Full Recipe</a>
+                    </div>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="https://images.unsplash.com/photo-1606890658317-7d14490a0d6b" alt="Shepherd's Pie">
+                        <h3>Shepherd's Pie</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Savory comfort food.</p>
+                        <a href="shepherds-pie.html">View Full Recipe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2023 British Kitchen Group Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
